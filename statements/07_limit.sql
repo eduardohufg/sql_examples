@@ -12,3 +12,4 @@ SELECT * FROM users LIMIT 2
 SELECT * FROM users WHERE NOT email LIKE 'eduardo%' OR age=19 LIMIT 2
 
 SELECT * FROM users WHERE NOT email LIKE 'eduardo%' OR age=19 LIMIT 2 OFFSET 1
+
