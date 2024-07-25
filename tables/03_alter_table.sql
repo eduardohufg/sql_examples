@@ -17,3 +17,7 @@ MODIFY COLUMN description varchar(200)
 -- drop column se usa para eliminar una columna
 ALTER TABLE persons4 
 DROP COLUMN description
+
+ALTER TABLE users
+add constraint fk_company
+foreign key (company_id) references companies(company_id)

@@ -77,3 +77,21 @@ CREATE TABLE persons3 (
     PRIMARY KEY(id),
     CHECK(age >= 18)
 );
+
+
+create TABLE languages(
+	language_id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+);
+
+
+create TABLE users_languages(
+	user_language_id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    user_id INT,
+    language_id INT,
+    
+    CONSTRAINT KF_T_1 FOREIGN KEY (user_id) REFERENCES users(user_id),
+    CONSTRAINT KF_T_2 FOREIGN KEY (language_id) REFERENCES languages(language_id),
+    UNIQUE (user_id, language_id)
+    
+);
