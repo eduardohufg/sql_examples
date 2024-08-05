@@ -13,3 +13,16 @@ user_id INT,
 unique(dni_id),
 FOREIGN KEY(user_id) references users(user_id)
 );
+
+
+-- inserts
+
+INSERT INTO dni (dni_number) VALUES (44444444)
+
+-- 1 : N
+
+INSERT INTO companies (name) VALUES ('microsoft');
+
+INSERT INTO companies (name) VALUES ('google');
+
+INSERT INTO companies (name) VALUES ('apple');
